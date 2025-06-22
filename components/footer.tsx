@@ -4,10 +4,11 @@ const Footer = () => {
       <p className='text-2xl text-center font-semibold text-quaternary-950'>PT. FURNIWELL MAKMUR ABADI</p>
 
       <div className='mt-8 pt-8 border-t border-quaternary-950/20 space-y-1 text-center'>
-        <ul className='flex flex-wrap items-center justify-start md:justify-center gap-x-2 gap-y-1 '>
+        <ul className='flex flex-wrap items-center justify-start md:justify-center gap-y-1'>
           {FOOTER_MENU.map((menu, index) => (
             <li key={index}>
-              {menu} {index !== FOOTER_MENU.length - 1 && <span className='mx-1 text-quaternary-950/20'>|</span>}
+              {menu}
+              {index !== FOOTER_MENU.length - 1 && <span className='mx-2 text-quaternary-950/20'>| </span>}
             </li>
           ))}
         </ul>
