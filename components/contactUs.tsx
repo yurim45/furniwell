@@ -4,7 +4,7 @@ const ContactUs = () => {
       <h3 className='mb-4 text-2xl font-bold text-quaternary-900'>[ Contact us ]</h3>
       <ul className='text-primary-950 text-md leading-8 mb-4'>
         <li>
-          <strong className={STYLE_STRONG}>Email</strong>: parkindo@naver.com
+          <strong className={STYLE_STRONG}>Email</strong>: furniwell2002@gmail.com
         </li>
         <li>
           <strong className={STYLE_STRONG}>Mobile</strong>: indonesia +62 813 250 96078
@@ -13,12 +13,12 @@ const ContactUs = () => {
           <strong className={STYLE_STRONG}>Kakao talk</strong>: parkindo1957
         </li>
         <li>
-          <strong className={STYLE_STRONG}>Korea</strong>: 031)941-5308
+          <strong className={STYLE_STRONG}>WhatApp</strong>: -
         </li>
       </ul>
       <p className='text-tertiary-950 text-lg leading-8'>
-        연중 대부분을 인도네시아 공장에 상주하므로 현지 모바일로 연락주시길 바랍니다. <br /> 카카오톡 추가 후
-        보이스톡으로도 연락주셔도 됩니다. 그 외 이메일로도 문의 가능합니다.
+        연중 대부분을 인도네시아 공장에 상주하므로 현지 모바일로 연락주시길 바랍니다. <br />
+        이메일 또는 카카오톡이나 왓츠앱 추가 후 보이스톡으로도 문의가 가능합니다.
       </p>
     </section>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 interface NavigationProps {
   isScrolled: boolean;
@@ -8,6 +9,7 @@ interface NavigationProps {
 
 const Navigation = ({ isScrolled }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -16,17 +18,22 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
   return (
     <>
       <nav className='hidden md:flex space-x-8'>
-        {MENU.map((menu) => (
-          <a
-            key={menu.name.id}
-            href={menu.href}
-            className={`transition-colors duration-200 ${
-              isScrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white hover:text-primary-200'
-            }`}
-          >
-            {menu.name.label}
-          </a>
-        ))}
+        {MENU.map((menu) => {
+          const isActive = pathname === menu.href;
+          return (
+            <a
+              key={menu.name.id}
+              href={menu.href}
+              className={`transition-colors duration-200 ${
+                pathname !== '/' || isScrolled
+                  ? 'text-primary-950 hover:text-primary-600'
+                  : 'text-white hover:text-primary-200'
+              } ${isActive ? 'font-extrabold' : 'font-thin'}`}
+            >
+              {menu.name.label}
+            </a>
+          );
+        })}
       </nav>
 
       {/* Mobile Menu Button */}
@@ -34,7 +41,9 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
         <button
           onClick={toggleMenu}
           className={`transition-colors duration-200 ${
-            isScrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white hover:text-primary-200'
+            pathname !== '/' || isScrolled
+              ? 'text-gray-700 hover:text-primary-600'
+              : 'text-white hover:text-primary-200'
           }`}
         >
           <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -52,11 +61,17 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
             </svg>
           </button>
           <ul className='pt-[60px] px-[32px] flex flex-col gap-8'>
-            {MENU.map((menu) => (
-              <li key={menu.name.id} className='text-primary-950 font-bold text-xl'>
-                <a href={menu.href}>{menu.name.label}</a>
-              </li>
-            ))}
+            {MENU.map((menu) => {
+              const isActive = pathname === menu.href;
+              return (
+                <li
+                  key={menu.name.id}
+                  className={`text-primary-950 text-xl ${isActive ? 'font-extrabold' : 'font-thin'}`}
+                >
+                  <a href={menu.href}>{menu.name.label}</a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}
@@ -70,14 +85,14 @@ const MENU = [
   {
     name: {
       id: 'home',
-      label: 'Home',
+      label: 'HOME',
     },
     href: '/',
   },
   {
     name: {
       id: 'about',
-      label: 'About',
+      label: 'ABOUT',
     },
     href: '/about',
   },

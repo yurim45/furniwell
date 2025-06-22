@@ -22,7 +22,7 @@ const MainSection = () => {
         />
 
         <div className='w-full md:w-1/2 text-[16px] md:text-[18px] leading-8'>
-          <p>{section.description}</p>
+          <p className='whitespace-pre-line'>{section.description}</p>
         </div>
       </div>
     </section>
@@ -40,7 +40,8 @@ const SECTION_INFO = [
     href: '/about',
     tag: null,
     image: '/images/common/main_logo.jpeg',
-    description:
-      'CV.ARIRANG(PT법인.FURNIWELL)은 1998년 창립 이후 지금까지 유럽형 클래식 엔틱 및 Minimalis 모던원목가구 제작과 인도네시아 소품 및 커피류 수출대행을 진행하고 있습니다. 저희 회사는 국내 및 전세계 바이어와 직접 수출을 함으로써 보다 합리적이며, 원활한 커뮤니케이션이 강점으로 바이어분들과의 멋진 협업을 기대합니다.',
+    description: `(주)퍼니웰은 1998년 창립 이래 다양한 인테리어 공사 프로젝트와 더불어 내수 및 수출용 가구를 안정적으로 공급해왔습니다. 또한, KCC GLASS 특수 팔레트를 합리적인 가격으로 대량 공급하며 업계의 신뢰를 이어가고 있습니다.
+    
+        국내는 물론 전 세계 바이어와의 직접 수출을 통해 효율적인 가격 경쟁력과 원활한 커뮤니케이션을 강점으로 삼고 있으며, 앞으로도 글로벌 파트너들과의 성공적인 협업을 기대합니다.`,
   },
 ];

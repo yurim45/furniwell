@@ -5,7 +5,7 @@ const MainTop = () => {
     <section className='pt-16 relative min-h-screen flex items-center overflow-hidden'>
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
-        <Image src='/images/common/bg-main.jpg' alt='Hero background' fill className='object-cover' priority />
+        <Image src='/images/common/bg_main.jpg' alt='Hero background' fill className='object-cover' priority />
         <div className='absolute inset-0 bg-gradient-to-b from-primary-950/90 to-primary-900/80'></div>
       </div>
 

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className='mt-8 pt-8 border-t border-quaternary-950/20 space-y-1 text-center'>
         <ul className='flex flex-wrap items-center justify-start md:justify-center gap-y-1'>
           {FOOTER_MENU.map((menu, index) => (
-            <li key={index}>
+            <li key={index} className='text-secondary-500'>
               {menu}
               {index !== FOOTER_MENU.length - 1 && <span className='mx-2 text-quaternary-950/20'>| </span>}
             </li>
@@ -21,10 +21,9 @@ const Footer = () => {
 export default Footer;
 
 const FOOTER_MENU = [
-  '퍼니웰코리아',
-  '박준호',
-  '경기도 파주시 야당동 427-6 나동',
-  '사업자등록번호: 497-01-00458',
-  '전화번호: 031-941-5308',
-  '이메일: PARKINDO@NAVER.COM',
+  'PARK JONG MAN',
+  'Mobile: +62 813 250 96078',
+  'Business registration number : 99.912.123.9-516.000',
+  'E-mail: furniwell2002@gmail.com',
+  'Adress: JALAN BAWU-BATEALIT RT. 001 RW. 001 MINDAHAN, BATEALIT KAB. JEPARA JAWA TENGAH',
 ];
