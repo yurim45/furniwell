@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 
-import { MENU } from '@/const/menu';
-
 interface NavigationProps {
   isScrolled: boolean;
 }
@@ -56,7 +54,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
           <ul className='pt-[60px] px-[32px] flex flex-col gap-8'>
             {MENU.map((menu) => (
               <li key={menu.name.id} className='text-primary-950 font-bold text-xl'>
-                {menu.name.label}
+                <a href={menu.href}>{menu.name.label}</a>
               </li>
             ))}
           </ul>
@@ -67,3 +65,20 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
 };
 
 export default Navigation;
+
+const MENU = [
+  {
+    name: {
+      id: 'home',
+      label: 'Home',
+    },
+    href: '/',
+  },
+  {
+    name: {
+      id: 'about',
+      label: 'About',
+    },
+    href: '/about',
+  },
+];

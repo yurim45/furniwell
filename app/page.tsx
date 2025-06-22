@@ -1,6 +1,7 @@
 import ContactUs from '@/components/contactUs';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
+import MainSection from '@/components/mainSection';
 import MainTop from '@/components/mainTop';
 
 export default function Home() {
@@ -14,9 +15,7 @@ export default function Home() {
       {/* Main Content */}
       <main className='flex-1 bg-white'>
         <ContactUs />
-        <div>
-          <h2 className='text-3xl font-bold text-gray-900 mb-4'>회사 소개</h2>
-        </div>
+        <MainSection />
       </main>
 
       <Footer />
