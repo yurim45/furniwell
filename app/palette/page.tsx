@@ -6,7 +6,7 @@ export default function PalettePage() {
   return (
     <main>
       <section className='relative flex flex-col items-center justify-center w-full h-[500px] overflow-hidden'>
-        <Image src='/images/palette/main_palette.jpeg' alt='팔레트 제품' fill className='object-cover' priority />
+        <Image src='/images/palette/main_top.jpeg' alt='팔레트 제품' fill className='object-cover' priority />
         <p className='relative text-lg mb-2 text-center text-white drop-shadow-2xl'>
           국내, 수출용 목재파렛트 제작 전문 업체
         </p>
