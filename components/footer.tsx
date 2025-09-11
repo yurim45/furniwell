@@ -6,7 +6,7 @@ const Footer = () => {
       <div className='mt-8 pt-8 border-t border-quaternary-950/20 space-y-1 text-center'>
         <ul className='flex flex-wrap items-center justify-start md:justify-center gap-y-1'>
           {FOOTER_MENU.map((menu, index) => (
-            <li key={index} className='text-secondary-500'>
+            <li key={index} className='text-secondary-500 text-left'>
               {menu}
               {index !== FOOTER_MENU.length - 1 && <span className='mx-2 text-quaternary-950/20'>| </span>}
             </li>
