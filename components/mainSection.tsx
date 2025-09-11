@@ -1,14 +1,15 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const MainSection = () => {
   return SECTION_INFO.map((section) => (
-    <section key={section.title.id} className='px-4 py-8'>
+    <section key={section.title.id} className='px-4 pt-10 pb-16'>
       <header className='flex justify-between items-center border-b-1 border-solid border-quaternary-300'>
         <h3 className='text-quaternary-400 text-2xl font-bold border-b-2 border-solid border-quaternary-400 cursor-pointer'>
-          <a href={section.href}>{section.title.label}</a>
+          <Link href={section.href}>{section.title.label}</Link>
         </h3>
         <small className='text-quaternary-400 text-sm cursor-pointer'>
-          <a href={section.href}>more</a>
+          <Link href={section.href}>more</Link>
         </small>
       </header>
 

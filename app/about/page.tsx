@@ -104,13 +104,13 @@ export default function AboutPage() {
         <h3 className={STYLE_SUB_TITLE}>HISTORY[국제가구전시회]</h3>
 
         {HISTORY_INFO.map((item, index) => (
-          <>
+          <div key={index}>
             <strong className='text-tertiary-950 text-md text-left'>{item.title}</strong>
             <div key={index} className='mb-8 flex gap-4 flex-col md:flex-row'>
               <Image src={item.image1} alt={item.title} width={1280} height={508} />
               <Image src={item.image2} alt={item.title} width={1280} height={508} />
             </div>
-          </>
+          </div>
         ))}
       </section>
     </main>

@@ -13,7 +13,7 @@ const ContactUs = () => {
           <strong className={STYLE_STRONG}>Kakao talk</strong>: parkindo1957
         </li>
         <li>
-          <strong className={STYLE_STRONG}>WhatApp</strong>: -
+          <strong className={STYLE_STRONG}>WhatsApp</strong>: -
         </li>
       </ul>
       <p className='text-tertiary-950 text-lg leading-8'>

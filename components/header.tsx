@@ -1,13 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import Navigation from './navigation';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +20,10 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const onClickLogo = () => {
+    router.push('/');
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -28,9 +33,10 @@ const Header = () => {
       <div className='flex justify-between items-center h-16 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Logo */}
         <h1
-          className={`text-xl font-bold transition-colors duration-300 ${
+          className={`text-xl font-bold transition-colors duration-300 cursor-pointer ${
             pathname !== '/' || isScrolled ? 'text-primary-950' : 'text-white'
           }`}
+          onClick={onClickLogo}
         >
           FURNIWELL
         </h1>

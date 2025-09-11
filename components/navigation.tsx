@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface NavigationProps {
   isScrolled: boolean;
@@ -10,9 +10,14 @@ interface NavigationProps {
 const Navigation = ({ isScrolled }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const onClickMenu = (href: string) => {
+    router.push(href);
   };
 
   return (
@@ -21,9 +26,9 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
         {MENU.map((menu) => {
           const isActive = pathname === menu.href;
           return (
-            <a
+            <button
               key={menu.name.id}
-              href={menu.href}
+              onClick={() => onClickMenu(menu.href)}
               className={`transition-colors duration-200 ${
                 pathname !== '/' || isScrolled
                   ? 'text-primary-950 hover:text-primary-600'
@@ -31,7 +36,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
               } ${isActive ? 'font-extrabold' : 'font-thin'}`}
             >
               {menu.name.label}
-            </a>
+            </button>
           );
         })}
       </nav>
@@ -68,7 +73,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
                   key={menu.name.id}
                   className={`text-primary-950 text-xl ${isActive ? 'font-extrabold' : 'font-thin'}`}
                 >
-                  <a href={menu.href}>{menu.name.label}</a>
+                  <button onClick={() => onClickMenu(menu.href)}>{menu.name.label}</button>
                 </li>
               );
             })}
@@ -95,5 +100,12 @@ const MENU = [
       label: 'ABOUT',
     },
     href: '/about',
+  },
+  {
+    name: {
+      id: 'palette',
+      label: '팔렛트',
+    },
+    href: '/palette',
   },
 ];

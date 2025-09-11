@@ -14,9 +14,9 @@ const MainTop = () => {
         <h1 className='text-5xl md:text-6xl font-bold drop-shadow-lg'>FURNIWELL</h1>
         <h3 className='text-2xl md:text-3xl mb-6 drop-shadow-lg'>MAKMUR ABADI</h3>
         <p className='text-xl md:text-2xl text-primary-200 mb-8 drop-shadow-md'>혁신적인 가구 솔루션을 제공합니다</p>
-        <button className='bg-quaternary-500 hover:bg-quaternary-600 text-primary-950 font-semibold px-8 py-3 rounded-lg transition-colors duration-200 shadow-lg'>
+        {/* <button className='bg-quaternary-500 hover:bg-quaternary-600 text-primary-950 font-semibold px-8 py-3 rounded-lg transition-colors duration-200 shadow-lg'>
           자세히 보기
-        </button>
+        </button> */}
       </div>
 
       {/* Decorative Elements */}
