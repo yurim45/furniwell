@@ -1,4 +1,4 @@
-import { TabInfo } from '@/app/palette/components/contents';
+import { TabInfo } from '@/types/conmmon';
 
 export const TabNavigation = ({
   tabInfo,

@@ -2,15 +2,15 @@
 
 import { useState } from 'react';
 
+import { PaletteTabInfo, TabInfo } from '@/types/conmmon';
+
 import { TabNavigation } from '@/components/tabNavigation';
 
-export type TabInfo = 'palette' | 'export_palette' | 'wooden_box' | 'paper_box';
-
 const Contents = () => {
-  const [activeTab, setActiveTab] = useState<TabInfo>('palette');
+  const [activeTab, setActiveTab] = useState<PaletteTabInfo>('palette');
 
   const onClickTab = (tab: TabInfo) => {
-    setActiveTab(tab);
+    setActiveTab(tab as PaletteTabInfo);
   };
 
   return (
@@ -22,8 +22,7 @@ const Contents = () => {
       <article className='p-8'>
         {activeTab === 'palette' && <div>파렛트</div>}
         {activeTab === 'export_palette' && <div>수출용 파렛트</div>}
-        {activeTab === 'wooden_box' && <div>수출용 목상자</div>}
-        {activeTab === 'paper_box' && <div>수출용 종이상자</div>}
+        {activeTab === 'paper_box' && <div>목상자</div>}
       </article>
     </>
   );
@@ -31,21 +30,17 @@ const Contents = () => {
 
 export default Contents;
 
-const TAB_INFO: { id: TabInfo; label: string }[] = [
+const TAB_INFO: { id: PaletteTabInfo; label: string }[] = [
   {
     id: 'palette',
-    label: '파렛트',
+    label: '내수용 파렛트',
   },
   {
     id: 'export_palette',
-    label: '수출용 파렛트',
-  },
-  {
-    id: 'wooden_box',
-    label: '수출용 목상자',
+    label: '수출용 팔렛트',
   },
   {
     id: 'paper_box',
-    label: '수출용 종이상자',
+    label: '목상자',
   },
 ];

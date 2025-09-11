@@ -97,9 +97,23 @@ const MENU = [
   {
     name: {
       id: 'about',
-      label: 'ABOUT',
+      label: '회사소개',
     },
     href: '/about',
+  },
+  {
+    name: {
+      id: 'furniture',
+      label: '가구',
+    },
+    href: '/furniture',
+  },
+  {
+    name: {
+      id: 'interior',
+      label: '인테리어',
+    },
+    href: '/interior',
   },
   {
     name: {

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import Contents from './components/contents';
 
-export default function PalettePage() {
+export default function FurniturePage() {
   return (
     <main>
       <section className='relative flex flex-col items-center justify-center w-full h-[500px] overflow-hidden'>
