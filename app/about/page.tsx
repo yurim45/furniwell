@@ -9,14 +9,16 @@ export default function AboutPage() {
           회사소개
         </h2>
       </div>
-      <Image src='/images/common/main_logo_transparent.png' alt='logo' width={600} height={600} />
-      <p>
-        (주)퍼니웰은 1998년 창립 이래 다양한 인테리어 공사 프로젝트와 더불어 내수 및 수출용 가구를 안정적으로
-        공급해왔습니다. 또한, KCC GLASS 특수 팔레트를 합리적인 가격으로 대량 공급하며 업계의 신뢰를 이어가고 있습니다.
-        <br /> <br />
+      <Image src='/images/logo.png' alt='logo' width={500} height={400} />
+      <p className='max-w-[1100px]'>
+        (주)퍼니웰은 1998년 창립 이래 인도네시아를 거점으로 B2B 대상 가구 수출, 인테리어 프로젝트, 목재 포장재를
+        공급하고 있습니다.
+        <br />
         국내는 물론 전 세계 바이어와의 직접 수출을 통해 효율적인 가격 경쟁력과 원활한 커뮤니케이션을 강점으로 삼고
-        있으며, 앞으로도 글로벌 파트너들과의 성공적인 협업을 기대합니다.
+        있으며 앞으로도 글로벌 파트너들과의 성공적인 협업을 기대합니다.
+        <br /> <br />
       </p>
+      <div className='w-full max-w-[1100px] text-right'>대표이사 박종만</div>
 
       <section className='my-[180px] w-full flex flex-col items-center'>
         <h3 className={STYLE_SUB_TITLE}>ABOUT US</h3>

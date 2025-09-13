@@ -18,6 +18,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
 
   const onClickMenu = (href: string) => {
     router.push(href);
+    setIsOpen(false);
   };
 
   return (
@@ -29,7 +30,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
             <button
               key={menu.name.id}
               onClick={() => onClickMenu(menu.href)}
-              className={`transition-colors duration-200 ${
+              className={`transition-colors duration-200 cursor-pointer ${
                 pathname !== '/' || isScrolled
                   ? 'text-primary-950 hover:text-primary-600'
                   : 'text-white hover:text-primary-200'

@@ -1,5 +1,4 @@
 import ContactUs from '@/components/contactUs';
-import MainSection from '@/components/mainSection';
 import MainTop from '@/components/mainTop';
 
 export default function Home() {
@@ -11,7 +10,7 @@ export default function Home() {
       {/* Main Content */}
       <main className='flex-1 bg-white'>
         <ContactUs />
-        <MainSection />
+        {/* <MainSection /> */}
       </main>
     </>
   );
