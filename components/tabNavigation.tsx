@@ -16,7 +16,7 @@ export const TabNavigation = ({
           <button
             key={tab.id}
             onClick={() => onClickTab(tab.id)}
-            className={`py-4 px-2 border-b-2 font-medium transition-colors max-[500px]:text-sm max-[500px]:max-w-[65px] max-[500px]:break-all ${
+            className={`py-4 px-2 border-b-2 font-medium transition-colors max-[500px]:text-md ${
               activeTab === tab.id
                 ? 'border-primary-600 text-primary-600'
                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
