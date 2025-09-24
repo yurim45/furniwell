@@ -7,6 +7,7 @@ import { FurnitureTabInfo, TabInfo } from '@/types/conmmon';
 import { TabNavigation } from '@/components/tabNavigation';
 import DetailTitle from '@/components/detailTitle';
 import DetailContent from '@/components/detailContent';
+import ContentArticle from '@/components/contentArticle';
 
 const Contents = () => {
   const [activeTab, setActiveTab] = useState<FurnitureTabInfo>('indoor');
@@ -21,7 +22,7 @@ const Contents = () => {
       <TabNavigation tabInfo={TAB_INFO} activeTab={activeTab} onClickTab={onClickTab} />
 
       {/* 탭 콘텐츠 영역 */}
-      <article className='p-8'>
+      <ContentArticle>
         {activeTab === 'indoor' && (
           <>
             <DetailTitle>인도어</DetailTitle>
@@ -61,7 +62,7 @@ const Contents = () => {
             </DetailContent>
           </>
         )}
-      </article>
+      </ContentArticle>
     </>
   );
 };

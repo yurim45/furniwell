@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import DetailTitle from '@/components/detailTitle';
 import DetailContent from '@/components/detailContent';
+import ContentArticle from '@/components/contentArticle';
 
 export default function InteriorPage() {
   return (
@@ -21,7 +22,7 @@ export default function InteriorPage() {
         <h1 className='relative text-4xl font-bold text-center text-white drop-shadow-2xl'>인테리어</h1>
       </section>
 
-      <article className='p-8'>
+      <ContentArticle>
         <DetailTitle>인테리어</DetailTitle>
         <DetailContent>
           우리는 인도네시아 현지에서 인테리어 디자인부터 가구, 소품, 자재 제작까지 토탈 인테리어 솔루션을 제공하고
@@ -31,8 +32,9 @@ export default function InteriorPage() {
           합리적인 가격으로 제공합니다. <br /> <br />
           단순히 시공만 하는 것이 아닙니다. 디자인 단계부터 고객과 긴밀하게 소통하며, 공간의 목적과 분위기에 맞는 맞춤형
           가구, 소품, 자재를 직접 제작하여 제공합니다. <br /> <br />
+          <Image alt='interior_image' src='/images/palette/interior_content_1.jpeg' width={1280} height={1000} />
         </DetailContent>
-      </article>
+      </ContentArticle>
     </main>
   );
 }
