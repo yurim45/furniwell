@@ -66,15 +66,18 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
               <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' />
             </svg>
           </button>
-          <ul className='pt-[60px] px-[32px] flex flex-col gap-8'>
+          <ul className='pt-[60px] flex flex-col'>
             {MENU.map((menu) => {
               const isActive = pathname === menu.href;
               return (
                 <li
                   key={menu.name.id}
-                  className={`text-primary-950 text-xl ${isActive ? 'font-extrabold' : 'font-thin'}`}
+                  className={`py-[18px] px-[32px] text-primary-950 text-xl ${
+                    isActive ? 'font-extrabold' : 'font-thin'
+                  }`}
+                  onClick={() => onClickMenu(menu.href)}
                 >
-                  <button onClick={() => onClickMenu(menu.href)}>{menu.name.label}</button>
+                  {menu.name.label}
                 </li>
               );
             })}

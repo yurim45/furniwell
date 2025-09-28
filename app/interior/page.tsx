@@ -7,7 +7,7 @@ import ContentArticle from '@/components/contentArticle';
 export default function InteriorPage() {
   return (
     <main>
-      <section className='relative flex flex-col items-center justify-center w-full h-[500px] overflow-hidden'>
+      <section className='relative flex flex-col items-center justify-center w-full h-[500px] overflow-hidden max-[500px]:h-[280px]'>
         <Image
           src='/images/interior/main_top.jpeg'
           alt='인테리어 샘플'
