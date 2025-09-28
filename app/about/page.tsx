@@ -11,8 +11,8 @@ export default function AboutPage() {
       </div>
       <Image src='/images/logo.png' alt='logo' width={500} height={400} />
       <p className='max-w-[1100px]'>
-        (주)퍼니웰은 1998년 창립 이래 인도네시아를 거점으로 B2B 대상 가구 수출, 인테리어 프로젝트, 목재 포장재를
-        공급하고 있습니다.
+        우리는 1998년 창립 이래 인도네시아를 거점으로 B2B 대상 가구 수출, 인테리어 프로젝트, 목재 포장재를 공급하고
+        있습니다.
         <br />
         국내는 물론 전 세계 바이어와의 직접 수출을 통해 효율적인 가격 경쟁력과 원활한 커뮤니케이션을 강점으로 삼고
         있으며 앞으로도 글로벌 파트너들과의 성공적인 협업을 기대합니다.
@@ -47,7 +47,7 @@ export default function AboutPage() {
         </div>
 
         {/* MANAGER */}
-        <div className='mt-[100px] flex flex-col md:flex-row items-center gap-8 md:gap-12'>
+        {/* <div className='mt-[100px] flex flex-col md:flex-row items-center gap-8 md:gap-12'>
           <Image
             src='/images/common/manager.jpeg'
             alt='MANAGER-PARK JUN HO'
@@ -68,12 +68,12 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <div className={STYLE_DIVIDER} />
 
-      <ContactUs />
+      {/* <ContactUs /> */}
 
       <div className={STYLE_DIVIDER} />
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
         ))}
       </section>
 
-      <section className='my-[100px] w-full'>
+      {/* <section className='my-[100px] w-full'>
         <h3 className={STYLE_SUB_TITLE}>OUR TECHNICIAN TEAM</h3>
         <p className='text-quaternary-900 my-4'>
           목공예, 암수짜임, 천연원료마감 등 가구를 만드는 전과정이 CV.ARIRANG 목공장인들을 통해 수제작으로 이루어 집니다
@@ -114,7 +114,7 @@ export default function AboutPage() {
             </div>
           </div>
         ))}
-      </section>
+      </section> */}
     </main>
   );
 }
