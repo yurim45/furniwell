@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -12,15 +13,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'FURNIWELL',
-  description: 'PT. FURNIWELL MAKMUR ABADI',
+  title: '퍼니웰(주) FURNIWELL',
+  description: '원목가구 목재 전문업체 PT. FURNIWELL MAKMUR ABADI',
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
     images: '/images/common/main_logo.jpeg',
-    title: 'FURNIWELL',
-    description: 'PT. FURNIWELL MAKMUR ABADI',
+    title: '퍼니웰(주) FURNIWELL',
+    description: '원목가구 목재 전문업체 PT. FURNIWELL MAKMUR ABADI',
     siteName: 'FURNIWELL',
     type: 'website',
   },
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang='en'>
