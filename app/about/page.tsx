@@ -1,4 +1,4 @@
-import ContactUs from '@/components/contactUs';
+// import ContactUs from '@/components/contactUs';
 import Image from 'next/image';
 
 export default function AboutPage() {
@@ -126,7 +126,7 @@ const CAREER_HISTORY_CEO = [
   { period: 'From April 1989 until February 1995', detail: 'Samsung Credit Card Co.Ltd' },
   { period: 'From March 1984 until April 1989', detail: 'NH BANK Worked' },
 ];
-const CAREER_HISTORY_MANAGER = [{ period: 'From May 2008 until now', detail: 'Furniwell / CEO (KOREA)' }];
+// const CAREER_HISTORY_MANAGER = [{ period: 'From May 2008 until now', detail: 'Furniwell / CEO (KOREA)' }];
 
 const ADDRESS_INFO = [
   {
@@ -139,23 +139,23 @@ const ADDRESS_INFO = [
   },
 ];
 
-const HISTORY_INFO = [
-  {
-    title: 'IFEX 2017',
-    image1: '/images/about/history1.jpeg',
-    image2: '/images/about/history2.jpeg',
-  },
-  {
-    title: 'Mozaik 2016',
-    image1: '/images/about/history3.jpeg',
-    image2: '/images/about/history4.jpeg',
-  },
-  {
-    title: 'JIFFINA 2016 ',
-    image1: '/images/about/history5.jpeg',
-    image2: '/images/about/history6.jpeg',
-  },
-];
+// const HISTORY_INFO = [
+//   {
+//     title: 'IFEX 2017',
+//     image1: '/images/about/history1.jpeg',
+//     image2: '/images/about/history2.jpeg',
+//   },
+//   {
+//     title: 'Mozaik 2016',
+//     image1: '/images/about/history3.jpeg',
+//     image2: '/images/about/history4.jpeg',
+//   },
+//   {
+//     title: 'JIFFINA 2016 ',
+//     image1: '/images/about/history5.jpeg',
+//     image2: '/images/about/history6.jpeg',
+//   },
+// ];
 
 const STYLE_NAME = 'w-full md:w-[460px] text-xl font-bold text-gray-800';
 const STYLE_IMAGE = 'flex-shrink-0 rounded-full object-cover w-[150px] h-[150px] md:w-[200px] md:h-[200px] shadow-lg';
