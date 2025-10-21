@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 
 const Navigation = () => {
@@ -50,12 +51,13 @@ const Navigation = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className='md:hidden fixed inset-0 bg-white z-50'>
+          <Image src='/images/logo.png' alt='logo' width={140} height={100} className='pl-6' />
           <button onClick={toggleMenu} className={`transition-colors duration-200 absolute top-4 right-4`}>
             <svg className='w-6 h-6' fill='none' stroke='black' viewBox='0 0 24 24'>
               <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' />
             </svg>
           </button>
-          <ul className='pt-[60px] flex flex-col'>
+          <ul className='pt-[20px] flex flex-col'>
             {MENU.map((menu) => {
               const isActive = pathname === menu.href;
               return (
