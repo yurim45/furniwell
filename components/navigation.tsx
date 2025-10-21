@@ -3,11 +3,7 @@
 import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
-interface NavigationProps {
-  isScrolled: boolean;
-}
-
-const Navigation = ({ isScrolled }: NavigationProps) => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
@@ -30,11 +26,8 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
             <button
               key={menu.name.id}
               onClick={() => onClickMenu(menu.href)}
-              className={`transition-colors duration-200 cursor-pointer ${
-                pathname !== '/' || isScrolled
-                  ? 'text-primary-950 hover:text-primary-600'
-                  : 'text-white hover:text-primary-200'
-              } ${isActive ? 'font-extrabold' : 'font-thin'}`}
+              className={`transition-colors duration-200 cursor-pointer 
+              text-primary-950 hover:text-primary-600 ${isActive ? 'font-extrabold' : 'font-thin'}`}
             >
               {menu.name.label}
             </button>
@@ -46,11 +39,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
       <div className='md:hidden'>
         <button
           onClick={toggleMenu}
-          className={`transition-colors duration-200 ${
-            pathname !== '/' || isScrolled
-              ? 'text-gray-700 hover:text-primary-600'
-              : 'text-white hover:text-primary-200'
-          }`}
+          className={`pt-[4px] transition-colors duration-200 text-gray-700 hover:text-primary-600`}
         >
           <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
             <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />

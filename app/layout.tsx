@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.variable} w-full max-w-screen-xl mx-auto`}>
+      <body className={`${inter.variable} w-full mx-auto`}>
         <Header />
         {children}
         <Footer />

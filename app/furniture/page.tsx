@@ -4,7 +4,7 @@ import Contents from './components/contents';
 
 export default function FurniturePage() {
   return (
-    <main>
+    <main className='max-w-screen-xl mx-auto'>
       <section className='relative flex flex-col items-center justify-center w-full h-[500px] overflow-hidden max-[500px]:h-[280px]'>
         <Image
           src='/images/furniture/main_top.jpeg'
