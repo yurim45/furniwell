@@ -36,15 +36,12 @@ const MainSection = () => {
 
                 <p className='text-gray-600 leading-relaxed text-sm mb-4'>{section.description}</p>
 
-                <Link
-                  href={section.href}
-                  className='inline-flex items-center text-quaternary-600 hover:text-quaternary-800 font-medium text-sm transition-colors'
-                >
+                <span className='inline-flex items-center text-quaternary-600 hover:text-quaternary-800 font-medium text-sm transition-colors'>
                   자세히 보기
                   <svg className='w-4 h-4 ml-1' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                   </svg>
-                </Link>
+                </span>
               </div>
             </Link>
           ))}
