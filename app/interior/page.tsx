@@ -6,7 +6,7 @@ import ContentArticle from '@/components/contentArticle';
 
 export default function InteriorPage() {
   return (
-    <main>
+    <main className='max-w-screen-xl mx-auto'>
       <section className='relative flex flex-col items-center justify-center w-full h-[500px] overflow-hidden max-[500px]:h-[280px]'>
         <Image
           src='/images/interior/main_top.jpeg'

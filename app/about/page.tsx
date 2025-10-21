@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <main className='pt-[100px] px-[32px] flex flex-col items-center'>
+    <main className='max-w-screen-xl mx-auto pt-[100px] px-[32px] flex flex-col items-center'>
       <div className='w-full border-b-1 border-solid border-quaternary-300'>
         <h2 className='inline-block text-quaternary-600 text-xl font-bold border-b-2 border-solid border-quaternary-300 text-left'>
           회사소개
