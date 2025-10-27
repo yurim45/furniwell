@@ -109,12 +109,14 @@ export default function AboutPage() {
           <div key={index} className='my-4'>
             <h4 className='text-primary-950 text-xl font-bold text-left leading-10'>{item.title}</h4>
             <p className='mb-4'>{item.address}</p>
-            {index === 0 ? (
+            <Image alt={item.address} src={`/images/about/address${index + 1}.jpg`} width={1200} height={800} />
+
+            {/* {index === 0 ? (
               <Image alt={item.address} src={`/images/about/address${index + 1}.jpg`} width={1200} height={800} />
             ) : (
               <div className='w-full h-[600px] rounded-lg overflow-hidden shadow-lg'>
-                {/* 구글맵 삽입 */}
-                <iframe
+              구글맵  
+              <iframe
                   src={item.mapUrl}
                   width='100%'
                   height='100%'
@@ -125,7 +127,7 @@ export default function AboutPage() {
                   title={`${item.title} 위치`}
                 />
               </div>
-            )}
+            )} */}
           </div>
         ))}
       </section>
