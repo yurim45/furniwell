@@ -12,20 +12,20 @@ const MainSection = () => {
           전문적인 서비스와 품질로 고객의 만족을 최우선으로 합니다
         </p>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {SECTION_INFO.map((section) => (
             <Link
               href={section.href}
               key={section.title.id}
               className='bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden'
             >
-              <div className='w-full h-60 max-[500px]:h-48'>
+              <div className='w-full h-60 max-[500px]:h-46'>
                 <Image
                   src={section.image}
                   alt={section.title.label}
                   width={400}
                   height={300}
-                  className='w-full h-full object-cover'
+                  className={`w-full h-full ${section.title.id === 'about' ? 'object-contain' : 'object-cover'}`}
                 />
               </div>
 
@@ -47,9 +47,6 @@ const MainSection = () => {
           ))}
         </div>
       </section>
-      <div className='relative h-[280px] max-[500px]:h-[200px]'>
-        <Image src='/images/main/bottom.jpeg' alt='bottom-image' fill className='object-cover' />
-      </div>
     </>
   );
 };
@@ -57,6 +54,16 @@ const MainSection = () => {
 export default MainSection;
 
 const SECTION_INFO = [
+  {
+    title: {
+      id: 'about',
+      label: '회사 소개',
+    },
+    href: '/about',
+    tag: null,
+    image: '/images/main/about.png',
+    description: `퍼니웰(주) 홈페이지를 방문해주신 여러분 반갑습니다.`,
+  },
   {
     title: {
       id: 'furniture',
