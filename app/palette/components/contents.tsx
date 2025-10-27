@@ -20,7 +20,7 @@ const Contents = () => {
   return (
     <>
       {/* 탭 네비게이션 */}
-      <div className='sticky top-[65] z-10 bg-white'>
+      <div className='sticky top-[80px] max-[500px]:top-[60px] z-10 bg-white'>
         <TabNavigation tabInfo={TAB_INFO} activeTab={activeTab} onClickTab={onClickTab} />
       </div>
 
@@ -28,10 +28,6 @@ const Contents = () => {
       <ContentArticle>
         {activeTab === 'palette' && (
           <>
-            <Image alt='palette_image' src='/images/palette/palette_content_1.jpeg' width={1280} height={1000} />
-            <Image alt='palette_image' src='/images/palette/palette_content_2.png' width={1280} height={1000} />
-            <br />
-            <br />
             <DetailTitle>팔렛트</DetailTitle>
             <DetailContent>
               우리는 인도네시아 2공장에서 현지 내수용 및 수출용 목재 팔렛트를 대량으로 전문 제작하고 있습니다. <br />{' '}
@@ -42,9 +38,19 @@ const Contents = () => {
               우리는 고객사와의 신뢰를 최우선 가치로 생각합니다. 책임감 있는 자세로 약속을 지키며, <br /> 단순한 거래
               관계를 넘어 믿음직한 비즈니스 파트너가 될 수 있도록 최선을 다하고 있습니다.
               <br />
-              {/* <Image alt='palette_image' src='/images/palette/palette_content_3.jpeg' width={1280} height={1000} /> */}
-              <br />
             </DetailContent>
+            <div className='mt-18 flex flex-col items-center'>
+              {Array.from({ length: 2 }, (_, index) => (
+                <Image
+                  key={index}
+                  src={`/images/palette/palette${index + 1}.jpg`}
+                  alt={`인도어 가구 제품 ${index + 1}`}
+                  width={1100}
+                  height={1000}
+                  quality={85}
+                />
+              ))}
+            </div>
           </>
         )}
         {activeTab === 'export_palette' && (
@@ -58,23 +64,32 @@ const Contents = () => {
               합니다. <br />이 과정은 목재를 고온에서 가열하여 내부의 모든 병해충을 완전히 제거하는 방법입니다.
               <br />
               <br />
-              <Image
-                alt='export_palette_image'
-                src='/images/palette/export_palette_content_1.jpeg'
-                width={400}
-                height={300}
-              />
-              <br />
               이러한 열처리 작업을 마친 목재에만 공인된 소독처리 마크를 부착합니다. <br />이 마크는 해당 목재가 국제
               기준을 충족했음을 증명하며, 원활한 통관 절차를 보장하는 중요한 역할을 합니다. <br /> <br />
-              <Image
-                alt='export_palette_image'
-                src='/images/palette/export_palette_content_2.png'
-                width={1280}
-                height={1000}
-              />
+              <Image alt='ippc logo' src='/images/palette/ippc1.jpg' width={600} height={300} />
               <br />
             </DetailContent>
+            <DetailTitle> 목재포장재 방역 (소독) 방법</DetailTitle>
+            <DetailContent>
+              목재포장재의 방역(소독) 방법에는 총 세 가지 방법이 있습니다.
+              <br />- HT (Heat Treatment) : 열처리 방식이 가장 많이 사용하는 방식이며, 목재 가장자리 중심부 최소 온도가
+              56도로 최소 30분간 30분간 열을 이용하여 병해충을 제거하는 방식입니다.
+              <br />- MB (Methyl Bromide) : 약품을 투입하여 24시간 동안 일정 농도 이상을 노출시켜 병해충을 제거하는
+              방식입니다.
+              <br />- DH (Dielectric Heat Treatment) : 마이크로웨이브 전파를 이용하여 빠르게 열을 일으켜 병해충을
+              제거하는 방식입니다.
+            </DetailContent>
+            <DetailTitle> IPPC 마크</DetailTitle>
+            <DetailContent>
+              IPPC 마크는 위의 예시와 같으며, 화인(貨印)에는 반드시 아래와 같은 내용이 포함되어 있어야 합니다.
+              <br />- IPPC Symbol : IPPC에서 승인한 로고
+              <br />- 국가 코드 : ISO의 두 자리 나라 코드
+              <br />- 관할기관 코드 : IPPC 마크 사용 등록증을 발급한 지역본부 관련 번호 (소독업체 고유번호 앞 두자리)
+              <br />- 소독업체코드 : 농림축산본부가 목재 소독 및 마크 표시에 대한 권한을 부여한 업체 고유 번호 (소독업체
+              고유번호 앞 세자리)
+              <br />- 방역(소독)처리 코드 : HT, MB, DH 방식 중 실시된 방역(소독) 코드
+            </DetailContent>
+            <Image alt='ippc logo' src='/images/palette/ippc2.jpg' width={600} height={400} />
           </>
         )}
         {activeTab === 'paper_box' && (

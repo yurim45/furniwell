@@ -20,7 +20,9 @@ const Contents = () => {
   return (
     <>
       {/* 탭 네비게이션 */}
-      <TabNavigation tabInfo={TAB_INFO} activeTab={activeTab} onClickTab={onClickTab} />
+      <div className='sticky top-[80px] max-[500px]:top-[60px] z-10 bg-white'>
+        <TabNavigation tabInfo={TAB_INFO} activeTab={activeTab} onClickTab={onClickTab} />
+      </div>
 
       {/* 탭 콘텐츠 영역 */}
       <ContentArticle>

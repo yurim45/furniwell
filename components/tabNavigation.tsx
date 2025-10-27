@@ -10,7 +10,7 @@ export const TabNavigation = ({
   onClickTab: (tab: TabInfo) => void;
 }) => {
   return (
-    <section className='sticky top-[80px] max-[500px]:top-[60px] bg-white border-b border-gray-200'>
+    <section className='bg-white border-b border-gray-200'>
       <nav className='flex space-x-8'>
         {tabInfo.map((tab) => (
           <button
