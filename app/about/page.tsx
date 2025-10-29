@@ -12,7 +12,7 @@ export default function AboutPage() {
         <Image src='/images/logo.png' alt='logo' width={400} height={300} />
         <div className='my-[20px] text-center'>
           <DetailTitle>
-            주식회사 퍼니웰(FUNIWELL)
+            주식회사 퍼니웰(FURNIWELL)
             <br />
             [Since 1998] 인도네시아 현지 직영, B2B 토탈 솔루션 파트너
           </DetailTitle>
