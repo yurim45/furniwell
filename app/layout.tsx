@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import Head from 'next/head';
 
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -20,6 +19,11 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  verification: {
+    other: {
+      'naver-site-verification': '41ba215b7c3d1cc4c490deafa82c3ab3c587630e',
+    },
+  },
   openGraph: {
     images: '/images/common/main_logo.jpeg',
     title: '퍼니웰(주) FURNIWELL',
@@ -36,9 +40,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <Head>
-        <meta name='naver-site-verification' content='41ba215b7c3d1cc4c490deafa82c3ab3c587630e' />
-      </Head>
       <body className={`${inter.variable} w-full mx-auto`}>
         <Header />
         {children}
