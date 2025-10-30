@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- TODO: 도메인명을 실제 배포 도메인으로 변경하세요 (예: https://your-domain.com) -->
+  <url>
+    <loc>https://furniwell.vercel.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2025-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://furniwell.vercel.app/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://furniwell.vercel.app/furniture</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2025-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://furniwell.vercel.app/interior</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2025-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://furniwell.vercel.app/palette</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2025-10-30</lastmod>
+  </url>
+</urlset>
+
+

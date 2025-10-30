@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
+import Head from 'next/head';
+
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -34,6 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <Head>
+        <meta name='naver-site-verification' content='41ba215b7c3d1cc4c490deafa82c3ab3c587630e' />
+      </Head>
       <body className={`${inter.variable} w-full mx-auto`}>
         <Header />
         {children}
