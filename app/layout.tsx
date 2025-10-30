@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    images: '/images/common/main_logo.jpeg',
+    images: '/images/og_image.jpg',
     title: '퍼니웰(주) FURNIWELL',
     description: '원목가구 목재 전문업체 PT. FURNIWELL MAKMUR ABADI',
     siteName: 'FURNIWELL',
