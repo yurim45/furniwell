@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  alternates: {
+    canonical: 'https://furniwell.vercel.app',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   verification: {
     other: {
       'naver-site-verification': '41ba215b7c3d1cc4c490deafa82c3ab3c587630e',
