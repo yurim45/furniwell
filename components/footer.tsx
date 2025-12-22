@@ -1,6 +1,7 @@
 const Footer = () => {
   return (
     <footer className='bg-primary-950 text-gray-400 text-xs max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-[100px]'>
+      <p className='text-lg text-center font-light text-quaternary-950'>인도네시아 가구 제조업체</p>
       <p className='text-2xl text-center font-semibold text-quaternary-950'>PT. FURNIWELL MAKMUR ABADI</p>
 
       <div className='mt-8 pt-8 border-t border-quaternary-950/20 space-y-1 text-center'>

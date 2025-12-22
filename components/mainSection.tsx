@@ -9,7 +9,7 @@ const MainSection = () => {
           우리의 다양한 서비스를 통해 더 넓은 세상과 소통할 수 있습니다
         </h2>
         <p className='text-lg text-gray-600 text-center mb-16 max-[500px]:text-md max-[500px]:text-left max-[500px]:mb-8'>
-          전문적인 서비스와 품질로 고객의 만족을 최우선으로 합니다
+          인도네시아 원목 제조업체로 전문적인 서비스와 품질로 고객의 만족을 최우선으로 합니다
         </p>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
@@ -62,7 +62,7 @@ const SECTION_INFO = [
     href: '/about',
     tag: null,
     image: '/images/main/about.png',
-    description: `퍼니웰(주) 홈페이지를 방문해주신 여러분 반갑습니다.`,
+    description: `인도네시아 가구 제조업체 퍼니웰(주)은 원목, 가구 제작 및 수출, 인테리어 프로젝트, 목재 팔레트 공급을 제공합니다.`,
   },
   {
     title: {
