@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "menu_home": "HOME",
+    "menu_about": "About",
+    "menu_furniture": "Furniture",
+    "menu_interior": "Interior",
+    "menu_palette": "Palette"
+  },
+  "home": {
+    "main_top_description": "Indonesia Furniture Manufacturer",
+    "main_top_title": "FURNIWELL",
+    "main_top_sub_title": "MAKMUR ABADI",
+    "main_top_description_2": "Innovative furniture solutions",
+    "main_section_title": "Our diverse services allow you to communicate with a wider world",
+    "main_section_description": "As an Indonesia wooden furniture manufacturer, we provide professional services and quality to prioritize customer satisfaction.",
+    "main_section_title_2": "Our diverse services allow you to communicate with a wider world",
+    "main_section_description_2": "As an Indonesia wooden furniture manufacturer, we provide professional services and quality to prioritize customer satisfaction."
+  }
+}

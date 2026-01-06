@@ -1,9 +1,10 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 import Navigation from './navigation';
-import Image from 'next/image';
+import Language from './language';
 
 const Header = () => {
   const router = useRouter();
@@ -24,7 +25,10 @@ const Header = () => {
           className='cursor-pointer'
         />
 
-        <Navigation />
+        <div className='flex items-center space-x-4'>
+          <Navigation />
+          <Language />
+        </div>
       </div>
     </header>
   );

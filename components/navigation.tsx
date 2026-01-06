@@ -4,9 +4,12 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 
+import { useTranslations } from 'next-intl';
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations('nav');
   const router = useRouter();
 
   const toggleMenu = () => {
@@ -22,15 +25,15 @@ const Navigation = () => {
     <>
       <nav className='hidden md:flex space-x-8'>
         {MENU.map((menu) => {
-          const isActive = pathname === menu.href;
+          const isActive = menu === 'home' ? pathname === '/' : pathname === `/${menu}`;
           return (
             <button
-              key={menu.name.id}
-              onClick={() => onClickMenu(menu.href)}
+              key={menu}
+              onClick={() => onClickMenu(`/${menu}`)}
               className={`transition-colors duration-200 cursor-pointer 
               text-primary-950 hover:text-primary-600 ${isActive ? 'font-extrabold' : 'font-thin'}`}
             >
-              {menu.name.label}
+              {t(`menu_${menu}`)}
             </button>
           );
         })}
@@ -50,7 +53,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className='md:hidden fixed inset-0 bg-white z-50'>
+        <div className='md:hidden w-full fixed inset-0 bg-white z-50'>
           <Image src='/images/logo.png' alt='logo' width={140} height={100} className='pl-6' />
           <button onClick={toggleMenu} className={`transition-colors duration-200 absolute top-4 right-4`}>
             <svg className='w-6 h-6' fill='none' stroke='black' viewBox='0 0 24 24'>
@@ -59,16 +62,16 @@ const Navigation = () => {
           </button>
           <ul className='pt-[20px] flex flex-col'>
             {MENU.map((menu) => {
-              const isActive = pathname === menu.href;
+              const isActive = menu === 'home' ? pathname === '/' : pathname === `/${menu}`;
               return (
                 <li
-                  key={menu.name.id}
+                  key={menu}
                   className={`py-[18px] px-[32px] text-primary-950 text-xl ${
                     isActive ? 'font-extrabold' : 'font-thin'
                   }`}
-                  onClick={() => onClickMenu(menu.href)}
+                  onClick={() => onClickMenu(`/${menu}`)}
                 >
-                  {menu.name.label}
+                  {t(`menu_${menu}`)}
                 </li>
               );
             })}
@@ -81,40 +84,4 @@ const Navigation = () => {
 
 export default Navigation;
 
-const MENU = [
-  {
-    name: {
-      id: 'home',
-      label: 'HOME',
-    },
-    href: '/',
-  },
-  {
-    name: {
-      id: 'about',
-      label: '회사소개',
-    },
-    href: '/about',
-  },
-  {
-    name: {
-      id: 'furniture',
-      label: '가구',
-    },
-    href: '/furniture',
-  },
-  {
-    name: {
-      id: 'interior',
-      label: '인테리어',
-    },
-    href: '/interior',
-  },
-  {
-    name: {
-      id: 'palette',
-      label: '팔렛트',
-    },
-    href: '/palette',
-  },
-];
+const MENU = ['home', 'about', 'furniture', 'interior', 'palette'];

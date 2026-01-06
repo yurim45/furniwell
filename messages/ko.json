@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "menu_home": "HOME",
+    "menu_about": "회사소개",
+    "menu_furniture": "가구",
+    "menu_interior": "인테리어",
+    "menu_palette": "팔렛트"
+  },
+  "home": {
+    "main_top_description": "인도네시아 가구 제조업체",
+    "main_top_title": "FURNIWELL",
+    "main_top_sub_title": "MAKMUR ABADI",
+    "main_top_description_2": "혁신적인 가구 솔루션을 제공합니다",
+    "main_section_title": "우리의 다양한 서비스를 통해 더 넓은 세상과 소통할 수 있습니다",
+    "main_section_description": "인도네시아 원목 제조업체로 전문적인 서비스와 품질로 고객의 만족을 최우선으로 합니다",
+    "main_section_title_2": "우리의 다양한 서비스를 통해 더 넓은 세상과 소통할 수 있습니다",
+    "main_section_description_2": "인도네시아 원목 제조업체로 전문적인 서비스와 품질로 고객의 만족을 최우선으로 합니다"
+  }
+}

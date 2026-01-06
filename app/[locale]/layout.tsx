@@ -1,8 +1,11 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+
 import { Inter } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -71,17 +74,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  const messages = await getMessages();
+
   return (
-    <html lang='en'>
-      <body className={`${inter.variable} w-full mx-auto`}>
-        <Header />
-        {children}
-        <Footer />
+    <html lang={locale}>
+      <body className={`${inter.variable} w-full mx-auto`} suppressHydrationWarning>
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
