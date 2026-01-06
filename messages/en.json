@@ -1,6 +1,7 @@
 {
   "common": {
-    "view_more": "View More"
+    "view_more": "View More",
+    "ceo": "JongMan Park"
   },
   "nav": {
     "menu_home": "HOME",
@@ -43,5 +44,21 @@
     "contact_us_mobile": "Mobile",
     "contact_us_kakao": "Kakao talk",
     "contact_us_whatsapp": "WhatsApp"
+  },
+  "about": {
+    "about_section_page_title": "About Us",
+    "about_section_title_1": "Company Name: Furniwell Co., Ltd.",
+    "about_section_title_2": "[Since 1998] Indonesia-based Direct Factory, B2B Total Solution Partner",
+    "about_section_description": "Furniwell Co., Ltd. has been engaged in B2B business in Indonesia for more than 25 years since its establishment.",
+    "about_section_business_title": "Main Business Fields",
+    "about_section_business_description_1": "Furniture Manufacturing and Export: Precise manufacturing and global export of Indonesian/outdoor furniture",
+    "about_section_business_description_2": "Interior Design Projects: Providing differentiated customized interior solutions to complete spaces",
+    "about_section_business_description_3": "Wood Pallet: Bulk production and supply of wood packaging materials (pallets) for domestic and export use",
+    "about_section_strength_title": "Furniwell Co., Ltd.'s Strengths",
+    "about_section_strength_description_1": "Trust-based communication: Through smooth and accurate communication, we fully reflect customer requirements",
+    "about_section_strength_description_2": "High quality & reasonable price: Providing precise quality at competitive prices through the efficiency of our directly-operated factory in Indonesia",
+    "about_section_strength_description_3": "Sincere partnership: We approach every project with sincerity and responsibility",
+    "about_section_success_description": "Through direct export to global buyers, we have strengths in efficient price competitiveness and smooth communication, and we look forward to successful collaboration with global partners in the future.",
+    "about_section_success_description_2": "CEO Park Jongman"
   }
 }

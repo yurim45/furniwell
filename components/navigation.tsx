@@ -4,20 +4,21 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const t = useTranslations('nav');
   const router = useRouter();
+  const t = useTranslations('nav');
+  const locale = useLocale();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const onClickMenu = (href: string) => {
-    router.push(href);
+    router.push(`/${locale}/${href.includes('home') ? '' : href}`);
     setIsOpen(false);
   };
 
@@ -25,7 +26,7 @@ const Navigation = () => {
     <>
       <nav className='hidden md:flex space-x-8'>
         {MENU.map((menu) => {
-          const isActive = menu === 'home' ? pathname === '/' : pathname === `/${menu}`;
+          const isActive = menu === 'home' ? pathname === `/${locale}` : pathname === `/${locale}/${menu}`;
           return (
             <button
               key={menu}
@@ -62,7 +63,8 @@ const Navigation = () => {
           </button>
           <ul className='pt-[20px] flex flex-col'>
             {MENU.map((menu) => {
-              const isActive = menu === 'home' ? pathname === '/' : pathname === `/${menu}`;
+              const isActive = menu === 'home' ? pathname === `/${locale}` : pathname === `/${locale}/${menu}`;
+
               return (
                 <li
                   key={menu}

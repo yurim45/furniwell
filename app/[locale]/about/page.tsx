@@ -1,52 +1,54 @@
 import Image from 'next/image';
 
+import { getTranslations } from 'next-intl/server';
+
 import DetailTitle from '@/components/detailTitle';
 import ContactUs from '@/components/contactUs';
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslations('about');
+  const tCommon = await getTranslations('common');
+
   return (
     <main className='max-w-screen-xl mx-auto pt-[100px] px-[32px] flex flex-col items-center'>
       {/* 회사소개 */}
       <section className='w-full flex flex-col items-center'>
-        <h2 className={STYLE_SUB_TITLE}>회사소개</h2>
+        <h2 className={STYLE_SUB_TITLE}>{t('about_section_page_title')}</h2>
         <Image src='/images/logo.png' alt='logo' width={400} height={300} />
         <div className='my-[20px] text-center'>
           <DetailTitle>
-            주식회사 퍼니웰(FURNIWELL)
+            {t('about_section_title_1')}
             <br />
-            [Since 1998] 인도네시아 현지 직영, B2B 토탈 솔루션 파트너
+            {t('about_section_title_2')}
           </DetailTitle>
-          <p className='max-w-[800px]'>
-            퍼니웰(주)은 창립 이래 인도네시아를 기반으로 25년 이상 B2B 전문 사업을 수행해 왔습니다.
-          </p>
+          <p className='max-w-[800px]'>{t('about_section_description')}</p>
         </div>
 
         <br />
 
         <div className='max-w-[550px]'>
           <div className={STYLE_DIVIDER} />
-          <DetailTitle> | 주요 사업 분야</DetailTitle>
+          <DetailTitle> | {t('about_section_business_title')}</DetailTitle>
           <ul className='my-[10px]'>
-            <li>- 가구 제작 및 수출: 인도어/아웃도어 가구의 정밀 제작 및 글로벌 수출</li>
-            <li>- 인테리어 프로젝트: 공간을 완성하는 차별화된 맞춤형 인테리어 솔루션 제공</li>
-            <li>- 목재 파렛트: 내수용 및 수출용 목재 포장재(파렛트) 대량 생산 및 공급</li>
+            <li>- {t('about_section_business_description_1')}</li>
+            <li>- {t('about_section_business_description_2')}</li>
+            <li>- {t('about_section_business_description_3')}</li>
           </ul>
-          <DetailTitle> | 퍼니웰(주)의 강점</DetailTitle>
+          <DetailTitle> | {t('about_section_strength_title')}</DetailTitle>
           <ul className='my-[10px]'>
-            <li>- 신뢰 기반 커뮤니케이션: 원활하고 정확한 소통을 통해 고객의 요구를 완벽히 반영</li>
-            <li>- 고품질 & 합리적 가격: 현지 직영의 효율성으로 정밀한 품질을 경쟁력 있는 가격에 제공</li>
-            <li>- 성실한 파트너십: 모든 프로젝트에 성실함과 책임감으로 임하는 자세</li>
+            <li>- {t('about_section_strength_description_1')}</li>
+            <li>- {t('about_section_strength_description_2')}</li>
+            <li>- {t('about_section_strength_description_3')}</li>
           </ul>
 
           <br />
 
           <div className={STYLE_DIVIDER} />
         </div>
-        <p className='py-16'>
-          전 세계 바이어와의 직접 수출을 통해 효율적인 가격 경쟁력과 원활한 커뮤니케이션을 강점으로 삼고 있으며 앞으로도
-          글로벌 파트너들과의 성공적인 협업을 기대합니다.
-        </p>
-        <div className='w-full max-w-[1100px] text-right'>대표이사 박종만</div>
+        <p className='py-16'>{t('about_section_success_description')}</p>
+        <div className='w-full max-w-[1100px] text-right'>
+          {t('about_section_success_description_2')} {tCommon('ceo')}
+        </div>
       </section>
 
       {/* 조직도 */}
@@ -63,7 +65,7 @@ export default function AboutPage() {
           />
 
           <div className='text-left'>
-            <h4 className={STYLE_NAME}>박종만 PARK JONG MAN</h4>
+            <h4 className={STYLE_NAME}>{tCommon('ceo')}</h4>
             <p className='text-md text-primary-600 mb-4'>CEO</p>
             <ul className='space-y-2 text-gray-600 text-sm'>
               {CAREER_HISTORY_CEO.map((item, index) => (
