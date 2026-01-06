@@ -1,14 +1,18 @@
-const Footer = () => {
+import { getTranslations } from 'next-intl/server';
+
+const Footer = async () => {
+  const t = await getTranslations('footer');
+
   return (
     <footer className='bg-primary-950 text-gray-400 text-xs max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-[100px]'>
-      <p className='text-lg text-center font-light text-quaternary-950'>인도네시아 가구 제조업체</p>
-      <p className='text-2xl text-center font-semibold text-quaternary-950'>PT. FURNIWELL MAKMUR ABADI</p>
+      <p className='text-lg text-center font-light text-quaternary-950'>{t('footer_title')}</p>
+      <p className='text-2xl text-center font-semibold text-quaternary-950'>{t('footer_title_2')}</p>
 
       <div className='mt-8 pt-8 border-t border-quaternary-950/20 space-y-1 text-center'>
         <ul className='flex flex-wrap items-center justify-start md:justify-center gap-y-1'>
           {FOOTER_MENU.map((menu, index) => (
             <li key={index} className='text-secondary-500 text-left'>
-              {menu}
+              {t(menu)}
               {index !== FOOTER_MENU.length - 1 && <span className='mx-2 text-quaternary-950/20'>| </span>}
             </li>
           ))}
@@ -21,10 +25,4 @@ const Footer = () => {
 
 export default Footer;
 
-const FOOTER_MENU = [
-  'PARK JONG MAN',
-  'Mobile: +62 813 250 96078',
-  'Business registration number : 99.912.123.9-516.000',
-  'E-mail: furniwell2002@gmail.com',
-  'Adress: JALAN BAWU-BATEALIT RT. 001 RW. 001 MINDAHAN, BATEALIT KAB. JEPARA JAWA TENGAH',
-];
+const FOOTER_MENU = ['footer_menu', 'footer_menu_2', 'footer_menu_3', 'footer_menu_4', 'footer_menu_5'];

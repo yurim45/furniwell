@@ -1,10 +1,22 @@
 {
+  "common": {
+    "view_more": "자세히 보기"
+  },
   "nav": {
     "menu_home": "HOME",
     "menu_about": "회사소개",
     "menu_furniture": "가구",
     "menu_interior": "인테리어",
     "menu_palette": "팔렛트"
+  },
+  "footer": {
+    "footer_title": "인도네시아 가구 제조업체",
+    "footer_title_2": "PT. FURNIWELL MAKMUR ABADI",
+    "footer_menu": "PARK JONG MAN",
+    "footer_menu_2": "Mobile: +62 813 250 96078",
+    "footer_menu_3": "Business registration number : 99.912.123.9-516.000",
+    "footer_menu_4": "E-mail: furniwell2002@gmail.com",
+    "footer_menu_5": "Adress: JALAN BAWU-BATEALIT RT. 001 RW. 001 MINDAHAN, BATEALIT KAB. JEPARA JAWA TENGAH"
   },
   "home": {
     "main_top_description": "인도네시아 가구 제조업체",
@@ -14,6 +26,22 @@
     "main_section_title": "우리의 다양한 서비스를 통해 더 넓은 세상과 소통할 수 있습니다",
     "main_section_description": "인도네시아 원목 제조업체로 전문적인 서비스와 품질로 고객의 만족을 최우선으로 합니다",
     "main_section_title_2": "우리의 다양한 서비스를 통해 더 넓은 세상과 소통할 수 있습니다",
-    "main_section_description_2": "인도네시아 원목 제조업체로 전문적인 서비스와 품질로 고객의 만족을 최우선으로 합니다"
+    "main_section_description_2": "인도네시아 원목 제조업체로 전문적인 서비스와 품질로 고객의 만족을 최우선으로 합니다",
+    "about_section_title": "회사 소개",
+    "about_section_description": "인도네시아 가구 제조업체 퍼니웰(주)은 원목, 가구 제작 및 수출, 인테리어 프로젝트, 목재 팔레트 공급을 제공합니다",
+    "furniture_section_title": "가구 제조",
+    "furniture_section_description": "내수 및 수출용 가구를 안정적으로 공급하며, 고품질의 제품으로 고객의 만족을 최우선으로 합니다",
+    "interior_section_title": "인테리어",
+    "interior_section_description": "다양한 인테리어 공사 프로젝트를 통해 고객의 공간을 아름답게 변화시킵니다",
+    "palette_section_title": "팔레트 공급",
+    "palette_section_description": "KCC GLASS 특수 팔레트를 합리적인 가격으로 대량 공급하며 업계의 신뢰를 이어가고 있습니다"
+  },
+  "contact": {
+    "contact_us_title": "Contact us",
+    "contact_us_description": "연중 대부분을 인도네시아 공장에 상주하므로 현지 모바일로 연락주시길 바랍니다. <br /> 이메일 또는 카카오톡이나 왓츠앱 추가 후 보이스톡으로도 문의가 가능합니다.",
+    "contact_us_email": "Email",
+    "contact_us_mobile": "Mobile",
+    "contact_us_kakao": "Kakao talk",
+    "contact_us_whatsapp": "WhatsApp"
   }
 }

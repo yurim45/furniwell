@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 
 const MainTop = async () => {
   const t = await getTranslations('home');
+
   return (
     <section className='pt-16 relative min-h-[700px] flex items-center overflow-hidden max-[500px]:min-h-[300px]'>
       {/* Background Image */}

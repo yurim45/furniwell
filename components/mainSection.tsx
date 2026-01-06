@@ -1,15 +1,20 @@
+import { getTranslations } from 'next-intl/server';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
-const MainSection = () => {
+const MainSection = async () => {
+  const t = await getTranslations('home');
+  const tCommon = await getTranslations('common');
+
   return (
     <>
       <section className='max-w-screen-xl mx-auto py-16 px-4 max-[500px]:py-8'>
         <h2 className='text-3xl font-bold text-gray-900 text-center mb-4 max-[500px]:text-2xl max-[500px]:text-left'>
-          우리의 다양한 서비스를 통해 더 넓은 세상과 소통할 수 있습니다
+          {t('main_section_title')}
         </h2>
         <p className='text-lg text-gray-600 text-center mb-16 max-[500px]:text-md max-[500px]:text-left max-[500px]:mb-8'>
-          인도네시아 원목 제조업체로 전문적인 서비스와 품질로 고객의 만족을 최우선으로 합니다
+          {t('main_section_description')}
         </p>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
@@ -22,7 +27,7 @@ const MainSection = () => {
               <div className='w-full h-60 max-[500px]:h-46'>
                 <Image
                   src={section.image}
-                  alt={section.title.label}
+                  alt={t(section.title.label)}
                   width={400}
                   height={300}
                   className={`w-full h-full ${section.title.id === 'about' ? 'object-contain' : 'object-cover'}`}
@@ -31,13 +36,13 @@ const MainSection = () => {
 
               <div className='p-6 text-center max-[500px]:text-left max-[500px]:p-4'>
                 <h3 className='text-xl font-bold text-gray-900 mb-3 hover:text-quaternary-600 transition-colors'>
-                  {section.title.label}
+                  {t(section.title.label)}
                 </h3>
 
-                <p className='text-gray-600 leading-relaxed text-sm mb-4'>{section.description}</p>
+                <p className='text-gray-600 leading-relaxed text-sm mb-4'>{t(section.description)}</p>
 
                 <span className='inline-flex items-center text-quaternary-600 hover:text-quaternary-800 font-medium text-sm transition-colors'>
-                  자세히 보기
+                  {tCommon('view_more')}
                   <svg className='w-4 h-4 ml-1' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                   </svg>
@@ -57,41 +62,41 @@ const SECTION_INFO = [
   {
     title: {
       id: 'about',
-      label: '회사 소개',
+      label: 'about_section_title',
     },
     href: '/about',
     tag: null,
     image: '/images/main/about.png',
-    description: `인도네시아 가구 제조업체 퍼니웰(주)은 원목, 가구 제작 및 수출, 인테리어 프로젝트, 목재 팔레트 공급을 제공합니다.`,
+    description: `about_section_description`,
   },
   {
     title: {
       id: 'furniture',
-      label: '가구 제조',
+      label: 'furniture_section_title',
     },
     href: '/furniture',
     tag: null,
     image: '/images/main/furniture.jpeg',
-    description: `내수 및 수출용 가구를 안정적으로 공급하며, 고품질의 제품으로 고객의 만족을 최우선으로 합니다.`,
+    description: `furniture_section_description`,
   },
   {
     title: {
       id: 'interior',
-      label: '인테리어',
+      label: 'interior_section_title',
     },
     href: '/interior',
     tag: null,
     image: '/images/main/interior.jpeg',
-    description: `다양한 인테리어 공사 프로젝트를 통해 고객의 공간을 아름답게 변화시킵니다.`,
+    description: `interior_section_description`,
   },
   {
     title: {
       id: 'palette',
-      label: '팔레트 공급',
+      label: 'palette_section_title',
     },
     href: '/palette',
     tag: null,
     image: '/images/main/palette.jpeg',
-    description: `KCC GLASS 특수 팔레트를 합리적인 가격으로 대량 공급하며 업계의 신뢰를 이어가고 있습니다.`,
+    description: `palette_section_description`,
   },
 ];
