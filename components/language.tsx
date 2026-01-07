@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
+
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/routing';
 
@@ -17,7 +19,13 @@ const Language = () => {
 
   return (
     <div className='relative'>
-      <button onClick={() => setIsOpen(!isOpen)}>{locale.toUpperCase()}</button>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className='flex items-center gap-1 text-primary-950 text-sm font-bold cursor-pointer'
+      >
+        <Image src={`/images/common/${locale}.svg`} alt={locale} width={24} height={32} />
+        {locale.toUpperCase()}
+      </button>
       {isOpen && (
         <ul className='absolute top-[calc(100%+10px)] right-0 w-[100px] bg-white shadow-md border border-gray-200 rounded-md flex flex-col items-start'>
           {LANGUAGE_MENU.map((langItem) => (

@@ -68,7 +68,6 @@ const Contents = () => {
               {t('furniture_section_outdoor_description5')} <br />
               <br />
               {t('furniture_section_outdoor_description6')} <br />
-              {t('furniture_section_outdoor_description7')} <br />
             </DetailContent>
             <div className='mt-18 flex flex-col items-center'>
               {Array.from({ length: 5 }, (_, index) => (
