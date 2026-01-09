@@ -44,7 +44,7 @@ const Contents = () => {
                 <Image
                   key={index}
                   src={`/images/palette/palette${index + 1}.jpg`}
-                  alt={`인도어 가구 제품 ${index + 1}`}
+                  alt={`인도네시아 가구 | 팔렛트 제품 ${index + 1}`}
                   width={1100}
                   height={1000}
                   quality={85}
@@ -90,7 +90,12 @@ const Contents = () => {
         )}
         {activeTab === 'paper_box' && (
           <>
-            <Image alt='paper_box_image' src='/images/palette/paper_box_content_1.jpeg' width={1280} height={1000} />
+            <Image
+              alt='인도네시아 가구 | 목상자 이미지'
+              src='/images/palette/paper_box_content_1.jpeg'
+              width={1280}
+              height={1000}
+            />
             <DetailTitle>{t('palette_section_paper_box_title')}</DetailTitle>
             <DetailContent>
               {t('palette_section_paper_box_description1')} <br /> <br />
@@ -101,7 +106,12 @@ const Contents = () => {
               {t('palette_section_paper_box_description6')} <br />
               {t('palette_section_paper_box_description7')} <br /> <br />
               {t('palette_section_paper_box_description8')} <br />
-              <Image alt='paper_box_image' src='/images/palette/paper_box_content_2.png' width={1280} height={1000} />
+              <Image
+                alt='인도네시아 가구 | 목상자 이미지'
+                src='/images/palette/paper_box_content_2.png'
+                width={1280}
+                height={1000}
+              />
               <br /> <br />
             </DetailContent>
           </>

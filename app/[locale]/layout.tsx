@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
   alternates: {
-    canonical: 'https://furniwell.vercel.app',
+    canonical: 'https://www.furniwell.kr',
   },
   robots: {
     index: true,

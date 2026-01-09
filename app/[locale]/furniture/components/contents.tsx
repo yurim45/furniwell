@@ -47,7 +47,7 @@ const Contents = () => {
                 <Image
                   key={index}
                   src={`/images/furniture/indoor${index + 1}.jpg`}
-                  alt={`인도어 가구 제품 ${index + 1}`}
+                  alt={`인도네시아 가구 | 인도어 가구 제품 ${index + 1}`}
                   width={1100}
                   height={1000}
                   quality={85}
@@ -74,7 +74,7 @@ const Contents = () => {
                 <Image
                   key={index}
                   src={`/images/furniture/outdoor${index + 1}.jpg`}
-                  alt={`아웃도어 가구 제품 ${index + 1}`}
+                  alt={`인도네시아 가구 | 아웃도어 가구 제품 ${index + 1}`}
                   width={1100}
                   height={1000}
                   quality={85}

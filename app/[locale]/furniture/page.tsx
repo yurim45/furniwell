@@ -11,7 +11,7 @@ export default async function FurniturePage() {
       <section className='relative flex flex-col items-center justify-center w-full h-[500px] overflow-hidden max-[500px]:h-[280px]'>
         <Image
           src='/images/furniture/main_top.jpg'
-          alt='아웃도어 가구 제품'
+          alt='인도네시아 가구 | 아웃도어 가구 제품'
           fill
           className='object-cover'
           style={{ objectPosition: 'center 70%' }}

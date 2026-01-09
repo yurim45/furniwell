@@ -8,6 +8,6 @@ Allow: /apple-touch-icon.png
 Allow: /icons/
 
 # Sitemap
-Sitemap: https://furniwell.vercel.app/sitemap.xml
+Sitemap: https://www.furniwell.kr/sitemap.xml
 
 
