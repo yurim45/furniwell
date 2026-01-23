@@ -1,9 +1,10 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
 const MainSection = async () => {
+  const locale = await getLocale();
   const t = await getTranslations('home');
   const tCommon = await getTranslations('common');
 
@@ -20,7 +21,7 @@ const MainSection = async () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {SECTION_INFO.map((section) => (
             <Link
-              href={section.href}
+              href={`/${locale}${section.href}`}
               key={section.title.id}
               className='bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden'
             >

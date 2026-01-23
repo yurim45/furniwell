@@ -8,17 +8,19 @@ const ContactUs = async () => {
       <h3 className='mb-4 text-2xl font-bold text-quaternary-900'>{t('contact_us_title')}</h3>
       <ul className='text-primary-950 text-md leading-8 mb-4'>
         <li>
-          <strong className={STYLE_STRONG}>{t('contact_us_email')}</strong>: furniwell2002@gmail.com
+          <strong className={STYLE_STRONG}>{t('contact_us_email')}</strong>: furniwell2002@gmail.com /
+          furniwellkorea@naver.com
         </li>
         <li>
-          <strong className={STYLE_STRONG}>{t('contact_us_mobile')}</strong>: indonesia +62 813 250 96078
+          <strong className={STYLE_STRONG}>{t('contact_us_mobile')}</strong>: indonesia +62 813 250 96078 / +62 822 303
+          86996
         </li>
         <li>
-          <strong className={STYLE_STRONG}>{t('contact_us_kakao')}</strong>: parkindo1957
+          <strong className={STYLE_STRONG}>{t('contact_us_kakao')}</strong>: furniwell / parkindo1957
         </li>
-        <li>
+        {/* <li>
           <strong className={STYLE_STRONG}>{t('contact_us_whatsapp')}</strong>: -
-        </li>
+        </li> */}
       </ul>
       <p
         className='text-tertiary-950 text-lg leading-8'
